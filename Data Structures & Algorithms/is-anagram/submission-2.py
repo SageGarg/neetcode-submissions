@@ -1,0 +1,36 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        # //anagram condition: each character same number of times. meaning same length and same frequency of each character
+        length_s = len(s)
+        length_t = len(t)
+        if (length_s != length_t):
+            return False
+        else:
+            sorted_s = "".join(sorted(s))
+            sorted_t = "".join(sorted(t))
+            if (sorted_s == sorted_t):
+                return True
+            # print(sorted_s)
+            # print(sorted_t)
+            # set_s = set()
+            # dict_s = {}
+            # set_t = set()
+            # dict_t = {}
+            # i = 0
+            # j = 0
+            # for e in sorted_s:
+            #     if e in set():
+            #         dict_s[e] = i+1
+            #     else:
+            #         set_s.add(e)
+            
+            # for e in sorted_t:
+            #     if e in set():
+            #         dict_t[e] = j+1
+            #     else:
+            #         set_s.add(e)
+
+            # # now we play with dictionaries
+            # return dict_s == dict_t
+        return False
+        
